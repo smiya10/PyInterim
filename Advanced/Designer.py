@@ -1,0 +1,5 @@
+symbol1 = input("Enter your first symbol ")
+symbol2 = input("Enter your second symbol ")
+joiner = input("Enter your joining symbol ")
+size = input("How many repeats? ")
+print((symbol1 + joiner + symbol2) * int(size))
