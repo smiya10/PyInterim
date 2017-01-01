@@ -1,6 +1,3 @@
----
-title: Document Center
----
 Intro to Python Mini Course
 ===========================
 
