@@ -4,19 +4,85 @@
     <h2>Objectives</h2>
     <ul>
         <li><a href="#goals">Goals of the class</a></li>
-        <li>Why Programming?</li>
-        <li>Types of programming languages</li>
+        <li><a href="#why">Why Programming?</a></li>
+        <li><a href="#types">Types of programming languages</a></li>
             <ul>
                 <li>Object-Oriented Programming (OOP) vs. Functional Programming</li>
                 <li>Interpreted vs. Compiled Languages</li>
                 <li>Static vs. Dynamic Typing</li>
             </ul>
-        <li>"Hello World" Example</li>
+        <li><a href="#hello">"Hello World" Example</a></li>
     </ul>
     
     <h2 id="goals">Class Overview</h2>
-    <p>In this class, you will learn the basics of programming using Python. Although you will learn far from everything, this introduction to programming will help you in future programming classes, in math/logic, and possibly even in your daily life.</p>
+    <p>In this class, you will learn the basics of programming using Python. Although you will learn far from everything, this introduction to programming will help you in future programming classes, in math/logic, and possibly even in your daily life. Note that most of this is covered in the syllabus.</p>
     <h3>What should I already know?</h3>
     <p>This class assumes no prior computer programming knowledge. You will need basic math skills (like really basic, just order of operations and the like) and the ability to use a computer for ordinary tasks. That's it. If you have more experience with programming, check out the <a href="../../Advanced/syllabus.html">advanced course</a>.</p>
-    <h3>
+    
+    <h2 id="why">Why Programming</h2>
+    <h3>History of Programming</h3>
+    <p>
+        Programming is designed to make jobs easier. In the beginning, there was math, and it was hard. So man created computer, and it was good.<br>
+        But the computer only understood binary machine code which looks like this:<br><br>
+        <code>0110100101010010101001010101010010101101010101010100101</code><br><br>
+        So man created a language called assembly to make it easier to understand, and it looked like this:<br><br>
+        <code>
+                msg:	db "Hello World",10<br>
+                len:	equ $-msg<br>
+            	mov	edx,len<br>
+                mov	ecx,msg<br>
+                mov	ebx,1<br>
+                mov	eax,4<br>
+                int	0x80<br>
+	   </code><br>
+	   This worked for a while, but man got greedy. From the greed (ambition) man created higher level programming languages which can be converted to machine code. There have been many variations, like C, Algol, but they still were not enough. Man wanted a language which looked and read like their own language, English. Thus, Python was created. In python, code is as readable as:<br><br>
+	   <code>print("hello world")</code><br><br>
+    </p>
+    <h3>What programming is not</h3>
+    <p>Programming is not "smart." Through computer programming, the computer can do lots of stuff, but the computer can do nothing without a program to tell it what to do. The browser you are reading this with is simply a program. The operating system running it is a program. Even the thing before the operating system that says how to find the operating system is a program. You have to tell it what to do or it will not know how.</p>
+    <h3>What programming is</h3>
+    <p>Programming is the process of writing the code to make the computer do stuff. The computer cannot think on it's own so you have to say exactly what you want to do. The computer will not make assumptions. 
+    <h3>Example: Making a peanut butter and jelly sandwich</h3>
+    <p>Try to write instructions to tell someone really dumb how to make a peanut butter and jelly sandwich.</p>
+    <p>You most likely said something like "spread peanut butter on one piece of bread and spread jelly on another piece of bread, then put the two pieces together with the spreads between them." The person still has to make some assumptions. Instead, you would need to:
+    <ol>
+        <li>Say exactly what you need to use
+        <ul>
+            <li>Two slices of bread</li>
+            <li>Peanut butter</li>
+            <li>Jelly</li>
+            <li>A knife</li>
+            <li>A spoon</li>
+        </ul></li>
+        <li>Describe every step necessary. You need to be simple and specific. For example:
+        <ul>
+            <li>Pick up bread and hold flat in your left hand</li>
+            <li>Transfer peanut butter to the face-up side of the bread</li>
+            <li>Spread peanut butter to be a flat layer covering all of face up surface</li>
+            <li>...</li>
+        </ul></li>
+    </ol>
+    
+    <h2 id="types">Types of Programming Languages</h2>
+    <p>Because there are so many programming languages, they are divided into many categories. Each is made to solve a specific issue (the specific issue may be to be general purpose). This section describes how Python is different from other programming languages.</p>
+    <h3>Object-Oriented Programming (OOP) vs. Functional Programming</h3>
+    <p><strong>Object Oriented: </strong>In OOP, data is stored in collections called objects. Object represent various attributes of a single thing and how the thing can be changed. For example, an object is created to represent a person. It contains the person's characteristics (height, weight, hair color, etc.) as well as the things that person can do (i.e. walk, run, sleep). Java is a strong example of this type of language.</p>
+    <p><strong>Functional: </strong>In functional programming, data is manipulated using math-like functions. The function is applied on variables and returns a variable. For example, the function multiply is applied on two variables x and y. If x=8 and y=4, then the function will return 32 becasue 8*4=32.</p>
+    <p>Python is <strong>multi-paradigm</strong>meaning it supports both types of programming. However, Python is primarily functional, so this course will not cover object oriented programming. This material is only covered in the advanced course.</p>
+    <h3>Interpreted vs. Compiled Languages</h3>
+    <p>In older languages like Java, code is <strong>compiled</strong> into machine code because the computer can only understand it that way. This means that a compiler program creates the machine code to complete the task written in the programming language.</p>
+    <p>Instead of this, Python is <strong>interpreted</strong>. It is converted to machine code when it is run. A program called an interpreter reads the programming language and completes the desired task as it is needed. This approach is slower than compiling, but it allows easier-to-write languages and provides a few added capabilities.</p>
+    <h3>Static vs. Dynamic Typing</h3>
+    <p>Because data can be of different types (integer, decimal number, character, string of characters), the computer must store different data differently. In <strong>statically-typed</strong> languages, you have to say what type of data each variable contains. On the contrary, Python is <strong>dynamically-typed</strong>. In such languages, you do not have to say what type of data a variable contains. This makes the language easier to write because you have one less thing to worry about. However, it is less safe because you will receive an error when you try to multiply a number by a sentence.</p>
+
+    <h2 id="hello">"Hello World" Example</h2>
+    <p>Finally, we get to do real programming! The "Hello World" example is familiar to all programmers. In every language and every school, you almost always start by printing "Hello World." All it does it prints the words "Hello World."</p>
+    <p>
+        You can find the program in the code bank <a href="../Code-Examples/Jan4/01-hello_world.py">here</a>, but it is also here:<br><br>
+        <code>print("Hello World") # Prints, quite literally, "Hello World" to the screen.</code><br><br>
+        <ul>
+            <li>print() is a <strong>function</strong> which accepts one input and uses the operating system to show it on the screen. The <strong>parameters</strong> are the things inside the parentheses which the function uses to do whatever it is meant to do.</li>
+            <li>The <strong>string</strong> ('string' just means a series of characters) "Hello World" is the information to be shown. It must be quotated because you want it printed exactly as it is written.</li>
+        </ul>
+    </p>
 </body>
