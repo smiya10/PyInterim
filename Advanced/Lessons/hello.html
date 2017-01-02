@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<head>
+    <title>"Hello World!"</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<h1>"Hello World!"</h1>
+    <!-- Table of Contents and Goals -->
+    <h2>Subjects in this lesson</h2>
+        <ul>
+        <li><a href="#setup">Writing and Running a Python File</a></li>
+            <ul>
+            <li><a href="#windows">On Windows</a></li>
+            <li><a href="#linux">On Linux</a></li>
+            <li><a href="#mac">On Mac</a></li>
+            </ul>
+        <li><a href="#explore">Exploring Hello World</a></li>
+        
+        </ul>
+    <h2>Objectives</h2>
+    <p>By the end of this lesson you will be able to:</p>
+        <ul>
+            <li>Write and Run Python Programs</li>
+            <li>Describe what a scripts are and what a scripting language is</li>
+            <li>Explain why abstract languages are slower than low-level languages</li>
+        </ul>
+    <p>Remember, if you have trouble with any of this, come see me! You aren't a bad programmer, but I <em>am</em> a bad writer!</p>        
+
+    <h2 id="setup">The Classic First Program</h2>    
+    <p>To make sure everything is working, we're going to write a little hello world program.<p>
+
+    <h2 id="windows">On Windows</h2>
+    <p>
+    Find and run the IDLE program. The first thing you should see is this: <img > <br>
+    This is the Python Interpreter. More on that later. For now, click File->New File. You should see this: <!-- img --> <br>
+    This is where you will be writing the majority of your programs. It's just a light text editor with syntax highlighting for Python. In fact, this editor is <em>designed</em> for Python. As such, it will
+    set a lot up for you, which will be quite the boon later. For now, just type <br>
+    <code> print("Hello World!") </code> <br>
+    save the file as hello.py, and click on Run->Run Module. That first screen we had should show the output or pop up if you closed it. It's a good idea to keep both this open, maybe in split view.
+    </p>
+ 
+    <h2 id="linux">On Linux</h2>
+    <p>
+    Open up your terminal and a text editor. Create a file called hello.py and type <br>
+        <code>print("Hello World")</code><br>
+    To run your program, navigate to file via terminal and type <br>
+    python ./hello.py  <em>or</em><br>
+    python3 ./hello.py (whichever you used in the install)<br>
+    to run the program. Replace hello.py with another .py file and that's how you'll run every python file you need. If that's too scary, follow the Windows instructions. You have IDLE, too, probably. Just
+    make sure you're using Python 3.x. 
+    </p>
+
+    <h2 id="mac">On Mac</h2>
+    <p> Honestly, I don't know. If you have IDLE, and that works with Python 3.x, then follow the Windows instructions. Otherwise, try the Linux instructions. </p>
+
+    <h2 id="explore">Exploring "Hello, World"</h2>
+    <p>
+    Let's look at our hello world program. 
+    <br>
+    <code> print("Hello World!") </code> 
+    <br>
+    Dead simple, right?. The print() function does what you expect: it prints. There's no System.out.printlns or couts here. In general, this is how Python works. The code is simple and easy to read. 
+    A lot of the work is already done for you. If you came from a language like Java or C, this is probably a breath of fresh air. If you came from a language like Ruby, this is just how things work. To
+    those who came from a language like Ruby and have only ever done those languages, I'm sorry. You're in for a world of ugliness (Java) soon enough.
+    </p>
+    
+    <p>
+    Jokes aside, you Java programmers may have noticed something interesting: There's no main method. There's not even a class declaration. In Python, you can actually get away with just typing code. 
+    You may be wondering why Python is so simple. Python is what's known as a <em>scripting language</em>. Scripting languages are syntaxically concise, easy to code languages that are commonly used to
+    write small programs called scripts. Scripting languages are simple and easy because we often don't want to waste time on dense Java code for small programs. For example, suppose I'm in Chemistry
+    lab and I need to perform a bunch of calculations of my data. I'm lazy and don't want to type the same things over and over again, so I decided to write a program to do it for me. That program 
+    would be a <em>script</em>. I <em>could</em> write it in Java, but it would take me just as long (or longer!) to get the program running as it would to use a calculator. Scripting languages make
+    writing this program a quick task, giving me the time to figure out why I have a percent error of 200. 
+    </p>
+    <p>
+    Python's simple syntax and high-level abstraction allows us to develop and test programs very quickly, cutting down on development time. Often, a Python program will be half as long, or shorter, than 
+    an equivalent C or Java program and twice as clear, perfect for small jobs.
+    </p>
+    
+    <p>
+    This abstraction, however, comes at the cost of performance. While a Python program will be shorter than a C program, the C program will blaze past Python at execution. To understand why, think of a 
+    program called Foo. Let's imagine Foo has two implementations: Foo.py and Foo.java . Since each program does the same thing, we must be able to translate the Python program into a Java program. 
+    So, theoretically, we could turn Foo.py into Foo.java. But let's stop for a moment and be clever programmers. If we take a method in foo.py, let's call it bar() and assume it's built-in: <br>
+    
+    <code>
+    <br>
+    bar(a, b, c)<br>
+    <br>
+    </code>
+    
+    and make it some Java code: <br>
+
+    <code>
+    <br>
+    int bar(int a, int b, int c){ <br>
+    int a2 = a + b; <br>
+    int a3 = a2 * c; <br>
+    return a3; <br>
+    } <br>
+    <br>
+    </code>
+    
+    Everything seems fine here, but what if I knew that my Foo program would never set c = 1. My Python code will still have to use the equivalent of int a3 = a2 * c, but my Java program could just do<br>
+    <code>
+    <br>
+    int bar(int a, int b){ <br>
+    return a + b; <br>
+    } <br>
+    <br>
+    </code>
+     
+    Less lines of code means faster execution, so foo.java would be faster. That difference may seem small, and for scripts it usually is, but what if I run bar() 1 million times? Suddenly, that difference
+    really matters. If you think that running the same bit of code 1 million times is ridiculous and would never actually happen, go talk to Dr. Whitbeck or a Computational Physics student. Now, there are
+    other things that make Python small but still awesome, but we'll talk about those when we get to the Interpreter.
+    
+    <h2>Summary</h2>
+    <p>
+    In this lesson, you learned how to make and run Python files. You also learned how to write a simple "Hello, World!" By looking at this simple program, we learned that Python is way simpler than Java. 
+    In discussing the simplicity, we also learned about <em>scripting languages</em> and <em>scripts</em> and why abstract languages like Python tend to be slow, and when that's acceptable. In the 
+    <!-- Add link to neext lesson -->next lesson, we will cover how the Python Interpreter works and dig deeper into Python's execution.
+    </p>
+    <br>
+    <br>
+</p>
+</body>
