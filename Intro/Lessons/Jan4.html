@@ -73,7 +73,7 @@
     <p>In older languages like Java, code is <strong>compiled</strong> into machine code because the computer can only understand it that way. This means that a compiler program creates the machine code to complete the task written in the programming language.</p>
     <p>Instead of this, Python is <strong>interpreted</strong>. It is converted to machine code when it is run. A program called an interpreter reads the programming language and completes the desired task as it is needed. This approach is slower than compiling, but it allows easier-to-write languages and provides a few added capabilities.</p>
     <h3>Static vs. Dynamic Typing</h3>
-    <p>Because data can be of different types (integer, decimal number, character, string of characters), the computer must store different data differently. In <strong>statically-typed</strong> languages, you have to say what type of data each variable contains. On the contrary, Python is <strong>dynamically-typed</strong>. In such languages, you do not have to say what type of data a variable contains. This makes the language easier to write because you have one less thing to worry about. However, it is less safe because you will receive an error when you try to multiply a number by a sentence.</p>
+    <p>Because data can be of different types (integer, decimal number, character, string of characters), the computer must store different data differently. In <strong>statically-typed</strong> languages, you have to say what type of data each variable contains. On the contrary, Python is <strong>dynamically-typed</strong>. In such languages, you do not have to say what type of data a variable contains. This makes the language easier to write because you have one less thing to worry about. However, it is less safe because you will receive an error when you try to divide a number by a sentence<sup id="fn1-top"><a href="#fn1">1</a></sup>.</p>
 
     <h2 id="hello">"Hello World" Example</h2>
     <p>Finally, we get to do real programming! The "Hello World" example is familiar to all programmers. In every language and every school, you almost always start by printing "Hello World." All it does it prints the words "Hello World."</p>
@@ -85,4 +85,9 @@
             <li>The <strong>string</strong> ('string' just means a series of characters) "Hello World" is the information to be shown. It must be quotated because you want it printed exactly as it is written.</li>
         </ul>
     </p>
+    
+    <h2 id=footnotes>Footnotes</h2>
+    <ol>
+        <li id=fn1>The rules are weird here. It is technically legal to multiply a string of characters by an integer. For example, <code>"hello" * 3 => "hellohellohello"</code>. <a href="#fn1-top">Return</a></li>
+    </ol>
 </body>
