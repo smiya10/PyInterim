@@ -3,8 +3,8 @@
     
     <h2 id="objectives">Today's Objectives</h2>
     <ul>
-        <li>Basic Syntax of Python</li>
-        <li>Numeric Operations</li>
+        <li><a href="#ex1">Basic Syntax of Python</a></li>
+        <li><a href="#math">Numeric Operations</a></li>
         <ul>
             <li>Addition +</li>
             <li>Subtraction -</li>
@@ -20,11 +20,60 @@
         <li>Creating and manipulating Variables</li>
     </ul>
     
-    <h2 id="diy">Let's Begin</h2>
+    <h2 id="get-started">Get Started</h2>
     <p>To start, enter the interactive shell on <a href="https://www.python.org" target="_blank">Python.org</a>. Like before, you will use this online shell to execute your code. For information on setting up the python shell on your own computer, see Syd's <a href="../../Advanced/Lessons/installpython.html" target="_blank">Installation Instructions</a> until I have the time to write my own or improve his (it's rough if you have a Mac, and pictures would be nice). You do not need to have Python installed on your machine, but it is more convenient.</p>
     
     <h2 id=ex1>Example One - Basic Syntax</h2>
     <p>
-        The first example will discuss the basic syntax of Python and the basics of variables. It can be found <a href="../Code-Examples/Jan5/01-syntax_example.py">here</a> but it will also be referenced here. 
+        The first example will discuss the basic syntax of Python and the basics of variables. It can be found <a href="../Code-Examples/Jan5/01-syntax_example.py">here</a>, but here's an overview of the materials discussed: 
+        <ul>
+            <li>Comments: Anything after a # is a comment and ignored by the interpreter.</li>
+            <li>Imports: You don't need this yet, but imports are used to use someone else's code</li>
+            <ul>
+                <li>This import says to include the math library, which provides several math functions. The math package is included with Python by default.</li>
+                <li>Don't reinvent the wheel.</li>
+            </ul>
+            <li>Variables and Assignment: </li>
+            <ul>
+                <li>Variables store data (numbers, strings, etc.)</li>
+                <li>Variables are assigned with the assignment operator '='.</li>
+                <ul>
+                    <li>Assignment in form <code>variable = literal</code></li>
+                    <li>The literal data on the right side is stored into the variable on the left side.</li>
+                </ul>
+                <li>Literals are data which are not variable (i.e. number 9 or string "hello")
+                <li>Variables can change by reassignment</li>
+            </ul>
+            <li>Displaying Variables - print() Function</li>
+            <ul>
+                <li><code>print()</code> is a function (this will be discussed in more detail soon) which displays data to the user</li>
+                <li><code>print()</code> can be used to print a string literal as in <code>print("hello")</code> - note the quotation marks to signify literal</li>
+                <li>It can also be used print the value stored in a variable <code>print(variable)</code></li>
+            </ul>
+            <li>Importance of Tabs</li>
+            <ul>
+                <li>Tabs are non-trivial in Python.</li>
+                <li>They signify that multiple lines of code go together.</li>
+                <li>For now, all of your code will need to be tabbed the same amount (probably not at all).</li>
+            </ul>
+            <li>Basic Data Types</li>
+            <ul>
+                <li>Integer: whole numbers (abbrev. "int") like 42</li>
+                <li>Floating-Point: decimal numbers (abbrev. "float") like 23.8</li>
+                <li>String: collection of characters like "example"</li>
+                <li>Boolean: True or False</li>
+                <li>There are other basic data types but they are not discussed now (or at all in the case of complex numbers)</li>
+            </ul>
+        </ul>
+        Other notes about syntax:
+        <ul>
+            <li>Naming convention: Python is lenient on convention for naming variables but the most common is to use lower case words separated by underscores (i.e. <code>this_is_a_variable</code>)</li>
+            <ul><li><em>Mixed case</em> is also accepted which starts with a lowercase word and appends all following words with a capital first letter (i.e. <code>thisIsAVariable</code>)</li></ul>
+            <li>You may have noticed this already, but capitalization matters. 'hi' is not the same as 'Hi'.</li>
+            <li>Comments are important. You may not see it now, but if you ever have to read someone else's code, you'll know. Start good habits now.</li>
+        </ul>
     </p>
+    
+    <h2 id="math">Basic Numeric Operations</h2>
+    <p>//TODO</p>
 </body>

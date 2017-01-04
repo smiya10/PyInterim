@@ -1,18 +1,59 @@
 no multiline commments
-comments early on
-naming convention (what are valid characters and what's common)
-left side must be a variable (no expression there)
+*comments early on
+*naming convention (what are valid characters and what's common)
+*left side must be a variable (no expression there)
 multiplication is not implicit like in math
-functions and variable names are lower case
-strings are quotated because you want them exactly like they are
-capitalization matters
+*functions and variable names are lower case
+*strings are quotated because you want them exactly like they are
+*capitalization matters
 parentheses work same as math
 user input with input() function and differences between Py2 and Py3
 escape sequences
+multiple assignment
+multiple comparison
+enums - probably not
+Nonetype
+deleting variables
 
 "Welcome to the first day of Reptilian Studies. Today we're going to talk about the Python. Hold on to your mice"
 
-built-n functions:
+keywords:
+    and
+    as (with ~ as ~) - probably not
+    assert - probably not
+    break - probably not
+    class - probably not
+    continue - probably not
+    def (functions)
+    del - probably not
+    elif
+    else
+    except - probably not
+    exec - probably not
+    False
+    finally - probably not
+    for
+    from (from ~ import ~)
+    global - probably not
+    if
+    import
+    in (~part in ~list)
+    is (tests memory location rather than equality) - probably not
+    lambda - definitely not
+    None
+    not
+    or
+    pass - possibly not
+    print
+    raise - probably not
+    return
+    True
+    try - probably not
+    while
+    with (with ~ as ~)
+    yield - probably not
+    
+built-in functions:
     casting:
         str() - string from number
         int() - int from string
