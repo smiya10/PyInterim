@@ -1,0 +1,65 @@
+no multiline commments
+comments early on
+naming convention (what are valid characters and what's common)
+left side must be a variable (no expression there)
+multiplication is not implicit like in math
+functions and variable names are lower case
+strings are quotated because you want them exactly like they are
+capitalization matters
+parentheses work same as math
+user input with input() function and differences between Py2 and Py3
+escape sequences
+
+"Welcome to the first day of Reptilian Studies. Today we're going to talk about the Python. Hold on to your mice"
+
+built-n functions:
+    casting:
+        str() - string from number
+        int() - int from string
+        float() - float from string
+        complex() - probably not
+        chr() - character from int - probably not
+        list() - to list from range, iterator, string, other collection
+        tuple() - basically same thing as list() but to tuple
+        
+    math:
+        abs()
+        min() - accepts lots of numbers
+        max() - accepts lots of numbers
+        round()
+        
+    looping:
+        range() - integers from start to (not including) stop by step
+        iter() - iterator over collection
+        reversed() - reversed iterator over collection
+        zip() - makes it possible to loop through multiple things at once
+        
+    collections:
+        len()
+        sum() - of a list
+        max() - accepts a collection
+        min() - accepts a collection
+        sorted() - probably not
+        
+        booleans:
+            all() - probably not
+            any() - probably not
+    
+    i/o:
+        print()
+        input()
+        open() - probably not
+        
+    slightly helpful:
+        dir() - shows attributes (variables and functions)
+        help() - shows help message of function
+    
+    probably not:
+        ascii() - makes escape sequences visible
+        bin() - makes binary representation
+        eval() - evaluates code
+        exec() -executes code
+        hex() - hex representation
+        isinstance() - test if instance of a class
+        oct() - octal representation
+        ord() - opposite of chr() - returns number version of character
