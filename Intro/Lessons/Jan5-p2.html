@@ -1,47 +1,98 @@
-<h1>Writing scripts (as opposed to interactive mode), more complex numeric operations (**, %, //, etc), strings</h1>
+<head>
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <h1>Writing scripts (as opposed to interactive mode), more complex numeric operations (**, %, //, etc), strings</h1>
 
-<h2 id="objectives">Today's Objectives</h2>
-<ul>
-    <li><a href="#scripts">Writing Scripts</a></li>
+    <h2 id="objectives">Today's Objectives</h2>
     <ul>
-        <li>Why scripts</li>
-        <li>Advantages and disadvantages</li>
-        <li>What's different and how to run them</li>
+        <li><a href="#scripts">Writing Scripts</a></li>
+        <ul>
+            <li>Why scripts</li>
+            <li>Advantages and disadvantages</li>
+            <li>What's different and how to run them</li>
+        </ul>
+        <li><a href=#complex-math">More Advanced numeric operations</a></li>
+        <ul>
+            <li>Exponentiation **</li>
+            <li>Truncating Division //</li>
+            <li>Modulo Function %</li>
+        </ul>
+        <li>String Fun</li>
+        <ul>
+            <li>Concatenating and repeating strings</li>
+            <li>Casting between numbers and strings</li>
+            <li>Formatting strings</li>
+        </ul>
     </ul>
-    <li><a href=#complex-math">More Advanced numeric operations</a></li>
+
+    <h2 id="scripts">Writing Scripts</h2>
+    <h3>What is a script?</h3>
+    <p>So far, you hvae written everything interactively (i.e. you type each line and see immediate results). Writing scripts allows you to save and rerun your code. A script is just the code saved as a file instead of written interactively. It's as simple as that. 
+    <h4>Advantages</h4>
+    <ul>
+        <li>Can be reused</li>
+        <li>Runs the exact same code each time it is run</li>
+    </ul>
+    <h4>Disadvantages</h4>
+    <ul>
+        <li>You cannot immediately see results</li>
+        <li>You do not have a second chance to rerun different versions of faulty lines of code</li>
+    </ul>
+    <h3>How to run scripts</h3>
+    <p>So, you've written your code and want to run it as a script. In the online interpreter, just insert it into the left panel and click run. If you have Python installed and in your path variable (Windows), name the file with .py extension and run <kbd>python [filename]</kbd>. Writing scripts is more like what you would do in any producion setting, so you will use this method for any future work.</p>
+
+    <h2 id="complex-math">Advanced Math Functions</h2>
+    <p>This section is not supported by an example script because these math functions are written the same way as the ones from the previous section.</p>
     <ul>
         <li>Exponentiation **</li>
-        <li>Modulo Function %</li>
-        <li>Truncating Division //</li>
+        <ul>
+            <li>Unlike many other languages, Python provides a simple functionality for exponentiation.</li>
+            <li>For variables <code>a</code> and <code>b</code> \(a^b\) is simply <code>a ** b</code></li>
+        </ul>
+        <li>Truncating Devision //</li>
+        <ul>
+            <li>Originally designed to deal with integer result when dividing two integers</li>
+            <li>For example, using "integer division," 9 / 4 is 2 because the 0.25 of result 2.25 is truncated to become an integer.</li>
+            <li>In Python, this is represented by <code>//</code> and can apply to both integers and flaots</li>
+            <li>For floats, the answer is truncated to the highest multiple of the divisor without going over.</li>
+            <ul>
+                <li>Ex. <code>9.3 // 3.5</code> is <code>2.0</code> because \( 3.5\times 2 = 7\) which is less than \(9.3\) and \(3.5\times 3 = 10.5\) which is greater than \( 9.3 \).</li>
+                <li>Note that the result is a float (signified by the <code>.0</code>) because at least one operand was a float</li>
+            </ul>
+        </ul>
+        <li>Modulo Operator</li>
+        <ul>
+            <li>Also known as modulus</li>
+            <li>Gets remainder after truncating division</li>
+            <li>Symbolized by % symbol (nothing to do with percents)</li>
+            <ul>
+                <li>Ex. <code>9 % 4</code> is <code>1</code> because \( 9 \div 4 = 2 \) with remainder \( 1 \).</li>
+            </ul>
+            <li>The same applies for floats but is not always a whole number</li>
+            <ul>
+                <li>Ex. <code>10.8 % 3.1</code> is <code>1.5</code> because <code>10.8 // 3.1</code> is <code>3.0</code> and \( 10.8 - 3.1 \times 3.0 = 1.5 \).</li>
+            </ul>
+        </ul>
+        <li>A Note on Floating Point Precision</li>
+        <ul>
+            <li>The above example brings up another important topic: floating-point precision.</li>
+            <li>Try the example from above: <code>10.8 % 3.1</code>.</li>
+            <ul>
+                <li>The result is <comp>1.5000000000000004</comp>, but it is expected to be 1.5 exactly.</li>
+            </ul>
+            <li>Floating-point numbers are stored using a finite number of digits and the power of 10, similar to scientific notation. Occasionally floating-point math becomes slightly off due to <strong>rounding error</strong>.</li>
+        </ul>
     </ul>
-    <li>String Fun</li>
+    
+    <h2 id="strings">String Manipulation</h2>
+    <h3>First Question: What is a string?</h3>
+    <p>Strings are collections of characters. Collections are a later topic, but they are just ways of storing multiple items in a single variable. Note that because strings are collections, many properties of lists will also apply to other collections.</p>
+    
+    <h3>Strings by Example</h3>
+    <p>Because strings can be a tricky topic, they are covered in an <a href="../Code-Examples/Jan5-p2/01-strings.py">example script</a>. Here's an overview of the example:</p>
     <ul>
-        <li>Concatenating and repeating strings</li>
-        <li>Formatting strings</li>
-        <li>Casting numbers to strings</li>
+        <li># TODO</li>
     </ul>
-</ul>
-
-<h2 id="scripts">Writing Scripts</h2>
-<h3>What is a script?</h3>
-<p>So far, you hvae written everything interactively (i.e. you type each line and see immediate results). Writing scripts allows you to save and rerun your code. A script is just the code saved as a file instead of written interactively. It's as simple as that. 
-<h4>Advantages</h4>
-<ul>
-    <li>Can be reused</li>
-    <li>Runs the exact same code each time it is run</li>
-</ul>
-<h4>Disadvantages</h4>
-<ul>
-    <li>You cannot immediately see results</li>
-    <li>You do not have a second chance to rerun different versions of faulty lines of code</li>
-</ul>
-<h3>How to run scripts</h3>
-<p>So, you've written your code and want to run it as a script. In the online interpreter, just insert it into the left panel and click run. If you have Python installed and in your path variable (Windows), name the file with .py extension and run <kbd>python [filename]</kbd>. Writing scripts is more like what you would do in any producion setting, so you will use this method for any future work.</p>
-
-<h2 id="complex-math">Advanced Math Functions</h2>
-<ul>
-    <li>Exponentiation **</li>
-    <ul>
-        <li>
-    </ul>
-</ul>
+</body>
