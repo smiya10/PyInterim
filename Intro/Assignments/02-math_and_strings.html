@@ -1,2 +1,87 @@
-<h1>Advanced Math and Strings Assignment</h1>
-<p>#TODO</p>
+<head> 
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <h1>Advanced Math and Strings Assignment</h1>
+    <p>This assignment is designed to test your abilities to manipulate strings and numbers. It will cover materials from the first three lessons. Like yesterday's assignment, you will write the output in the column on the right. If the code contains an error, fix the error and write the revised output.</p>
+    
+    <table border="1" width="100%" class="table">
+        <col width="1%">
+        <col width="69%">
+        <col width="30%">
+        <thead>
+            <tr class="header">
+                <th align="center">Problem Number</th>
+                <th align="center">Code Snippet</th>
+                <th align="center">Output</th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td class="number" align="center"></td>
+                <td>
+                    <pre><code>
+    fingers = input("How many fingers do you have?")
+    toes = input("How many toes do you have?")
+    appendages = fingers + toes # Add number of fingers and number of toes
+    print("You have " + appendages + " appendages")
+
+    # Assume the user inputs two valid integers (test case 10 and 9).
+                    </code></pre>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td>
+                    <pre><code>
+    test = str(9 + int("9") - int(18))
+    print(test * 6)
+                    </code></pre>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td>
+                    <pre><code>
+    a = 9.9
+    b = 4
+    print("My uncle's %dth wife " % b + "has %d toes on her %s foot" % (a,"right"))
+                    </code></pre>
+                </td>
+                <td></td>
+            </tr>
+        </body>
+    </table>
+    
+    <p>Answer Key and Explanation: <span class="answer"></span>. "You have 109 appendages" for inputs "10" and "9" - Inputs are not casted to integers so when they are "added" together, they are actually concatenated; <span class="answer"></span>. "000000" - test contains "0" because the numbers add to 0 and then it is casted to a string. When the string "0" is multiplied by 6, it is repeated 6 times; <span class="answer"></span>. "My uncle's 4th wife has 9 toes on her right foot" - This uses two formatting strings and concatenates them after formatting. The second format specifier is %d which casts to an integer, hence why it is 9, not 9.9.</p>
+    
+    <h2>More to come #TODO</h2>
+    
+    <script>
+        //Puts problem numbers so I don't have to worry about order
+        function replaceNumbers(className) {
+            var problemNumbers = document.getElementsByClassName(className);
+            for(var i = 0; i < problemNumbers.length; i++) {
+                problemNumbers[i].innerHTML = i+1;
+            }
+        }
+        
+        replaceNumbers("number")
+        replaceNumbers("answer")
+    </script>
+    
+    <script>
+        //Makes odd and even rows if I ever need that
+        var tables = document.getElementsByClassName("table");
+        document.alert(tables.lenght);
+        for(var i = 0; i < tables.length; i++) {
+            var rows = tables[i].getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+            for(var j = 0; j < rows.length; j++) {
+                rows[j].setAttribute("class", (j % 2 == 0) ? "odd" : "even"); //Flipped because i starts at 0
+            }
+        }
+    </script>
+</body>

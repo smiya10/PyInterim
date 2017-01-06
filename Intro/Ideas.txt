@@ -1,13 +1,13 @@
-no multiline commments
+*no multiline commments //TODO put multiline comments in html
 *comments early on
 *naming convention (what are valid characters and what's common)
 *left side must be a variable (no expression there)
-multiplication is not implicit like in math
+*multiplication is not implicit like in math
 *functions and variable names are lower case
 *strings are quotated because you want them exactly like they are
 *capitalization matters
-parentheses work same as math
-user input with input() function and differences between Py2 and Py3
+*parentheses work same as math
+*user input with input() function and differences between Py2 and Py3
 escape sequences
 multiple assignment
 multiple comparison
