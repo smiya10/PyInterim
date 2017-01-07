@@ -60,6 +60,10 @@ print(string_with_float) # prints "Float here: 2.200000"
 # Prints with several decimal points
 #       This can be changed, but not in this course because it gets complicated quickly
 
+print("4 decimals: %.2f" % inserted_float) # prints "4 decimals: 2.20" 
+# The number of decimal places can be specified by adding a decimal and number of decimals
+#       (i.e. "%.2f" puts 2 decimal places)
+
 inserted_string = "James"
 string_with_insert = "Hello, %s. How are you?"
 print(string_with_insert) # prints "Hello, James. How are you?"

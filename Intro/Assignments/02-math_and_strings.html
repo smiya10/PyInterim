@@ -53,12 +53,67 @@
                 </td>
                 <td></td>
             </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td>
+                    <pre><code>
+    print(int(str(float(input("Enter a float: ")))))
+    
+    # Assume the user enters a valid float (test case 4.2)
+                    </code></pre>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td>
+                    <pre><code>
+    a = 9
+    b = 1 // 2
+    c = 1 % 2
+    print(a ** b ** c)
+                    </code></pre>
+                </td>
+                <td></td>
+            </tr>
         </body>
     </table>
     
-    <p>Answer Key and Explanation: <span class="answer"></span>. "You have 109 appendages" for inputs "10" and "9" - Inputs are not casted to integers so when they are "added" together, they are actually concatenated; <span class="answer"></span>. "000000" - test contains "0" because the numbers add to 0 and then it is casted to a string. When the string "0" is multiplied by 6, it is repeated 6 times; <span class="answer"></span>. "My uncle's 4th wife has 9 toes on her right foot" - This uses two formatting strings and concatenates them after formatting. The second format specifier is %d which casts to an integer, hence why it is 9, not 9.9.</p>
+    <p>Answer Key and Explanation: <span class="answer"></span>. "You have 109 appendages" for inputs "10" and "9" - Inputs are not casted to integers so when they are "added" together, they are actually concatenated; <span class="answer"></span>. "000000" - test contains "0" because the numbers add to 0 and then it is casted to a string. When the string "0" is multiplied by 6, it is repeated 6 times; <span class="answer"></span>. "My uncle's 4th wife has 9 toes on her right foot" - This uses two formatting strings and concatenates them after formatting. The second format specifier is %d which casts to an integer, hence why it is 9, not 9.9; <span class="answer"></span>. 1 - a is 9, b is 1 // 2 which is 0 because 1/2 is truncated to 0, and c is 1 because the remainder of 1/2 is 1. 9**0 is 1 and 1**1 is 1.</p>
     
-    <h2>More to come #TODO</h2>
+    <h2>Part 2</h2>
+    <p>For part 2, (like in the previous assignment,) you will write code to solve the problem. Please start good habits by commenting your code. Check your code by plugging it in the Python interpreter but only after you are confident in your answer. Good luck.</p>
+    
+    <table border="1" width="100%" class="table">
+        <col width="1%">
+        <col width="39%">
+        <col width="60%">
+        <thead>
+            <tr class="header">
+                <th align="center">Problem Number</th>
+                <th align="center">Problem</th>
+                <th align="center">Solution</th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Using a single variable and no literal (i.e. you can't just do <code>print("1.231.21.1")</code>) and only a formatting string, print the following IP address: "1.231.21.1". Hint: you can use different numbers of decmimal places in formatting floats.
+                <br><br></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Ask the user for the diameter and height of a cylinder. Calculate and display the volume and surface area of the cylinder, clearly stating which is area and which is volume. (You can use ormatting strings or concatenation methods). 
+                <br><br></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Selected Answers and Explanations: 1. <code>print("%.2f%.1f%.1%d" % (var, var, var, var))</code> where <code>var=1.23</code>. </p>
     
     <script>
         //Puts problem numbers so I don't have to worry about order
