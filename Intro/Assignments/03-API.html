@@ -1,2 +1,81 @@
-<h1>API Assignment</h1>
-<p>#TODO implement</p>
+<head>
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <h1>API Assignment</h1>
+    <p>Unlike other assignments, this assignment is meant for you to look up the answers... in the API, that is. The questions have not been covered in class, but with the help of the <a href="https://docs.python.org/3.5/library/" target="_blank">Python API</a>, all of these questions should be fairly simple. Make sure to import whatever modules you need before using them.</p>
+    
+    <table border="1" width="100%" class="table">
+        <col width="1%">
+        <col width="69%">
+        <col width="30%">
+        <thead>
+            <tr class="header">
+                <th align="center">Problem Number</th>
+                <th align="center">Problem</th>
+                <th align="center">Code Solution</th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Using the <code>math</code> module, ask the user for an integer and calculate the factorial of that number. 
+                <br><br></td>
+                <td><br><br><br><br><br><br><br><br></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Using the <code>random</code> module, display to the user a random number between 0 and 100.
+                <br><br></td>
+                <td><br><br><br><br><br><br><br><br></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Ask the user for three numbers, then display the three numbers using the <code>format()</code> method found in the <code>string</code> module. (It is similar to formatting strings seen last week but not exactly the same.)
+                <br><br></td>
+                <td><br><br><br><br><br><br><br><br></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Import the three modules necessary for the following (they may not be in the list of commonly used ones):
+                    <ol>
+                        <li>Measure the time a function takes to run</li>
+                        <li>Deal with decimal values as fractions rather than floating-point numbers</li>
+                        <li>Send an email</li>
+                    </ol>
+                </td>
+                <td><br><br><br><br><br><br><br><br></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script>
+        //Puts problem numbers so I don't have to worry about order
+        function replaceNumbers(className) {
+            var problemNumbers = document.getElementsByClassName(className);
+            for(var i = 0; i < problemNumbers.length; i++) {
+                problemNumbers[i].innerHTML = i+1;
+            }
+        }
+        
+        replaceNumbers("number")
+        replaceNumbers("answer")
+    </script>
+    
+    <script>
+        //Makes odd and even rows if I ever need that
+        var tables = document.getElementsByClassName("table");
+        document.alert(tables.lenght);
+        for(var i = 0; i < tables.length; i++) {
+            var rows = tables[i].getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+            for(var j = 0; j < rows.length; j++) {
+                rows[j].setAttribute("class", (j % 2 == 0) ? "odd" : "even"); //Flipped because i starts at 0
+            }
+        }
+    </script>
+</body>
