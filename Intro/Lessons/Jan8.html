@@ -15,7 +15,7 @@
     </ul>
 
     <h2 id="functions">Using functions</h2>
-    <p>Like in math, functions use variables to calculate values. For example, \( f(x) = 4x^2 \) is a function of x. For the comparable function <code>4 * x ** 2</code> in Python (or other programming languages), f is the <strong>function</strong>, x is a <strong>parameter</strong> and the value of f(x) is the <strong>return value</strong>. In a purely functional paradigm, functions act just as in math (they accept parameters and return a value based only on the parameters)<a id="fn1-top" href="#fn1"><sup>1</sup></a>. For the example above, the funtion could be called by the following <code>return_value = f(5)</code>. Note: "<code>return</code>" is a reserved word in Python. After the above statement, the variable <code>return_variable</code> would contain the return value of the function <code>f</code> with <code>5</code> as a parameter, or <code>100</code>.</p>
+    <p>Like in math, functions use variables to calculate values. For example, \( f(x) = 4x^2 \) is a function of x. For the comparable function <code>4 * x ** 2</code> in Python (or other programming languages), f is the <strong>function</strong>, x is a <strong>parameter</strong> and the value of f(x) is the <strong>return value</strong>. In a purely functional paradigm, functions act just as in math (they accept parameters and return a value based only on the parameters)<a id="fn1-top" href="#fn1"><sup>1</sup></a>. For the example above, the function could be called by the following <code>return_value = f(5)</code>. Note: "<code>return</code>" is a reserved word in Python. After the above statement, the variable <code>return_variable</code> would contain the return value of the function <code>f</code> with <code>5</code> as a parameter, or <code>100</code>.</p>
     
     <h2 id="builtins">Common Builtin Functions</h2>
     <p>Python provides several builtin functions, for example <code>input()</code> and <code>print()</code>, as you've seen already. Here's a <a href="../Reference/Builtins.html" target="_blank">list</a> of the ones you'll likely use (others can be found in the <a href="http://docs.python.org/3.5/library/functions.html" target="_blank">documentation</a>):</p>
@@ -25,12 +25,23 @@
     <p>Modules are other people's scrips that make your life easiser. You don't have to reinvent the wheel. This lesson will use the <code>math</code> library as an example and list several others. The use of the math library can be seen in this <a href="../Code-Examples/Jan8/01-math_module.py">example script</a>.</p>
     
     <h2 id="API">Using the Python API</h2>
+    <h3>Commonly Used Functions</h3>
+    <p>Before we discuss how to use the API, here's a list of all the libraries you can find in the API:</p>
     <iframe src="../Reference/Libraries.html" width="100%" frameborder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight + 1) + 'px';"></iframe>
     
+    <h3>How to read the API</h3>
+    <p>Each language provides its own standard API. Although the Java API is by far the easiest to navigate, the Python API is similar in nature. To learn how to read the API, we will discuss the <code>math.log10()</code> function.</p>
+    <img src="Images/Jan8-API_example.png" alt="Unable to display math.log10() example">
+    <p>The API explains the purpose of this function and how to use it. Unfortunately, Python does not always tell the types of parameters and return values (because it is dynamically typed), but it explains how they are used. From that, you can see that the two parameters are numeric and that it returns a numeric value of the hypotenuse.</p>
+    
     <h2 id="typing">Static vs. Dynamic Typing and Type Safety</h2>
+    <p>As discussed earlier, Python is a dynamically typed language. As such, variable types are not known until runtime, and types can change. Unlike in statically-typed languages, variables can be used as the wrong type and will not cause errors until they are used. Type safety (making sure you don't use the wrong type of object) is much more difficult in Python. The standard way is <strong>duck-typing</strong> which is essentially doing first and asking questions later (that is, tying potentially incorrect uses and dealing with errors if they occur). We will likely not discuss error handling in this lesson because it is not necessary to get started, but it is important if you plan to go farther.</p>
+    
+    <h2 id="assignment">Assignment</h2>
+    <p>Looky here. It's an <a href="../Assignments/03-API.html">assignment</a>.</p>
     
     <h2 id="footnotes">Footnotes</h2>
     <ol>
-        <li id="fn1">In Object-Oriented Programming, and other paradigms, functions can use values other than the parameters, sometimes leading to unexpected side-effects. The upredictability of OOP led to the rise in popularity of functional programming. <a href="#fn1-top">Return</a></li>
+        <li id="fn1">In Object-Oriented Programming, and other paradigms, functions can use values other than the parameters, sometimes leading to unexpected side-effects. The unpredictability of OOP led to the rise in popularity of functional programming. <a href="#fn1-top">Return</a></li>
     </ol>
 </body>
