@@ -8,18 +8,26 @@
     <h2 id="objectives">Today's Objectives</h2>
     <ul>
         <li><a href="#functions">Using functions</a></li>
-        <li><a href="builtins">Common builtin functions</a></li>
-        <li>Module Imports</li>
-        <li>The Python API (Application Program Interface)</li>
-        <li>Static vs Dynamic Typing</li>
+        <li><a href="#builtins">Common builtin functions</a></li>
+        <li><a href="#imports">Module Imports</li>
+        <li><a href="#API">The Python API (Application Program Interface)</a></li>
+        <li><a href="#typing">Static vs Dynamic Typing and Type Safety</a></li>
     </ul>
 
     <h2 id="functions">Using functions</h2>
-    <p>Like in math, functions use variables to calculate values. For example, \( f(x) = 4x^2 \) is a function of x. For the comparable function <code>4 * x ** 2</code> in Python (or other programming languages), f is the <strong>function</strong> x is a <strong>parameter</strong> and the value of f(x) is the <strong>return value</strong>. In a purely functional paradigm, functions act just as in math (they accept parameters and return a value based only on the parameters)<a id="fn1-top" href="#fn1"><sup>1</sup></a>. For the example above, the funtion could be called by the following <code>return_value = f(5)</code>. Note: "<code>return</code>" is a reserved word in Python. After the above statement, the variable <code>return_variable</code> would contain the return value of the function <code>f</code> with <code>5</code> as a parameter, or <code>100</code>.</p>
+    <p>Like in math, functions use variables to calculate values. For example, \( f(x) = 4x^2 \) is a function of x. For the comparable function <code>4 * x ** 2</code> in Python (or other programming languages), f is the <strong>function</strong>, x is a <strong>parameter</strong> and the value of f(x) is the <strong>return value</strong>. In a purely functional paradigm, functions act just as in math (they accept parameters and return a value based only on the parameters)<a id="fn1-top" href="#fn1"><sup>1</sup></a>. For the example above, the funtion could be called by the following <code>return_value = f(5)</code>. Note: "<code>return</code>" is a reserved word in Python. After the above statement, the variable <code>return_variable</code> would contain the return value of the function <code>f</code> with <code>5</code> as a parameter, or <code>100</code>.</p>
     
     <h2 id="builtins">Common Builtin Functions</h2>
-    <p>Python provides several builtin functions, for example <code>input()</code> and <code>print()</code>, as you've seen already. Here's a list of the ones you'll likely use (others can be found in the <a href="http://docs.python.org/3.5/library/functions.html">documentation</a>):</p>
-    <iframe src="../Reference/Builtins.html" width="100%" height="100%" frameborder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight + 1) + 'px';"></iframe>
+    <p>Python provides several builtin functions, for example <code>input()</code> and <code>print()</code>, as you've seen already. Here's a <a href="../Reference/Builtins.html" target="_blank">list</a> of the ones you'll likely use (others can be found in the <a href="http://docs.python.org/3.5/library/functions.html" target="_blank">documentation</a>):</p>
+    <iframe src="../Reference/Builtins.html" width="100%" frameborder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight + 1) + 'px';"></iframe>
+    
+    <h2 id="imports">Module Imports</h2>
+    <p>Modules are other people's scrips that make your life easiser. You don't have to reinvent the wheel. This lesson will use the <code>math</code> library as an example and list several others. The use of the math library can be seen in this <a href="../Code-Examples/Jan8/01-math_module.py">example script</a>.</p>
+    
+    <h2 id="API">Using the Python API</h2>
+    <iframe src="../Reference/Libraries.html" width="100%" frameborder="0" onload="this.style.height=(this.contentDocument.body.scrollHeight + 1) + 'px';"></iframe>
+    
+    <h2 id="typing">Static vs. Dynamic Typing and Type Safety</h2>
     
     <h2 id="footnotes">Footnotes</h2>
     <ol>
