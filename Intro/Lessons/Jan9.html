@@ -21,13 +21,49 @@
         </ul>
         <li>Indexing Collections</li>
     </ul>
+</ul>
     
-    <h2 id="functions">Writing Functions</h2>
-    <p>This section is contained entirely in an <a href="../Code-Examples/Jan9/01-functions.py">example script</a>.
-    
-    <h2 id="collections">Intro to Collections</h2>
-    <p>This section is also contained in an <a href="../Code-Examples/Jan9/02-collections.py">example script</a>. The only thing left to explain is why collections are useful.</p>
-    <h3 id="why-collections">Why Collections</h3>
-    <p>Collections are variables which contain multiple pieces of data. Collections make it easier to store multiple related values without cluttering with variables, but more importantly, they are used to contain datasets of variable length. In Python specifically, collections help with looping and functions with multiple return values.</p>
+<h2 id="functions">Writing Functions</h2>
+<p>This section is contained entirely in an <a href="../Code-Examples/Jan9/01-functions.py">example script</a>.
+
+<h2 id="collections">Intro to Collections</h2>
+<p>This section is also contained in an <a href="../Code-Examples/Jan9/02-collections.py">example script</a>. The only thing left to explain is why collections are useful.</p>
+<h3 id="why-collections">Why Collections</h3>
+<p>Collections are variables which contain multiple pieces of data. Collections make it easier to store multiple related values without cluttering with variables, but more importantly, they are used to contain datasets of variable length. In Python specifically, collections help with looping and functions with multiple return values.</p>
+<h3>Specifics of Each Collection</h3>
+<ul>
+    <li>Tuples</li>
+    <ul>
+        <li>Immutable (cannot be changed)</li>
+        <li>Faster than lists</li>
+        <li>Write-protected</li>
+    </ul>
+    <li>Strings</li>
+    <ul>
+        <li>Contain only characters</li>
+        <li>Immutable</li>
+    </ul>
+    <li>Lists</li>
+    <ul>
+        <li>Length and values can be changed</li>
+        <li>Not as fast as tuples (but necessary for changing values)</li>
+    </ul>
+    <li>Dictionaries</li>
+    <ul>
+        <li>Map from one value to another</li>
+        <ul>
+            <li>i.e. {"three": 3, "four": 4} means "three" is mapped to 3 and "four" is mapped to 4</li>
+        </ul>
+        <li>Fairly slow</li>
+    </ul>
 </ul>
 
+<p>The documentation of each list can be found in the Python API:</p>
+<ul>
+    <li><a href="https://docs.python.org/3/library/stdtypes.html#tuple">Tuple</a></li>
+    <li><a href="https://docs.python.org/3/library/stdtypes.html#str">String</a></li>
+    <li><a href="https://docs.python.org/3/library/stdtypes.html#list">List</a></li>
+    <li><a href="https://docs.python.org/3/library/stdtypes.html#dict">Dict</a></li>
+</ul>
+
+<h2 id="assignment"><a href="../Assignments/05-functions_collections.html">Assignment</a></h2>
