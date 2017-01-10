@@ -1,2 +1,89 @@
-<h1>Conditionals Assignment</h1>
-<p># TODO</p>
+<!DOCTYTPE html>
+<head>
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <h1>Conditionals Assignment</h1>
+    <p>This assignment attempts to test conditionals and control flow without much dependency on other lessons (although some is anavoidable). Remember to comment your code. Good luck.</p>
+    
+    <table border="1" width="100%" class="table">
+        <col width="1%">
+        <col width="39%">
+        <col width="60%">
+        <thead>
+            <tr class="header">
+                <th align="center">Problem Number</th>
+                <th align="center">Problem</th>
+                <th align="center">Code Solution</th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Ask the user for a single word, then do the following:
+                    <ul>
+                        <li>Introduce yourself if the word is "hello"</li>
+                        <li>Say goodbye if "bye"</li>
+                        <li>Say "stop, drop and roll" if "fire"</li>
+                        <li>Say "coffee" if the word is "sleep"</li>
+                    </ul>
+                <br><br></td>
+                <td><br><br><br><br><br><br><br><br></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Ask the user to input the number of sides on two dice. (So two integers.) Use the random.randint() function to simulate the rolling of each die. Print which die won the roll.
+                <br><br></td>
+                <td><br><br><br><br><br><br><br><br></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Pick a random number between 0 and 10 (again with random.randint() ). Ask the user for a number and tell them if they guessed it correctly. If they were wrong, tell them how far they were from the number.
+                <br><br></td>
+                <td><br><br><br><br><br><br><br><br></td>
+            </tr>
+            <tr>
+                <td class="number" align="center"></td>
+                <td><br>
+                    Ask the user for two number values and do the following:
+                    <ul>
+                        <li>Say "yes" if either is 42</li>
+                        <li>Print the sum of the numbers if they are both in the range [0, 10) (meaning greater than or equal to 0 and less than 10)</li>
+                        <li>Print the first divided by the second if the second is not zero</li>
+                        <li>Print the product if nothing else works</li>
+                    </ul>
+                <br><br></td>
+                <td><br><br><br><br><br><br><br><br></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script>
+        //Puts problem numbers so I don't have to worry about order
+        function replaceNumbers(className) {
+            var problemNumbers = document.getElementsByClassName(className);
+            for(var i = 0; i < problemNumbers.length; i++) {
+                problemNumbers[i].innerHTML = i+1;
+            }
+        }
+        
+        replaceNumbers("number")
+        replaceNumbers("answer")
+    </script>
+    
+    <script>
+        //Makes odd and even rows if I ever need that
+        var tables = document.getElementsByClassName("table");
+        document.alert(tables.lenght);
+        for(var i = 0; i < tables.length; i++) {
+            var rows = tables[i].getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+            for(var j = 0; j < rows.length; j++) {
+                rows[j].setAttribute("class", (j % 2 == 0) ? "odd" : "even"); //Flipped because i starts at 0
+            }
+        }
+    </script>
+<body>
