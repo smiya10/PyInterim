@@ -12,13 +12,116 @@
     <h2 id="objectives">Today's Objectives</h2>
     <ul>
         <li><a href="#errors">Common Error Messages and how to decipher them</a></li>
-        <li>Variable Scoping (another common source of error</li>
-        <li>Example Programs</li>
+        <li><a href="#scopes">Variable Scoping (another common source of error)</a></li>
+        <li><a href="#examples">Example Programs</a></li>
     </ul>
     
     <h2 id="errors">Common Error Messages</h2>
     <p>One important skill in computer science is debugging your code. This section will show several common error messages and explain what they mean. The goal is that this will help you decipher and resolve any error message you run into.</p>
     <ul>
-        <li><span class="error">Error Example Here</span> shows an error #TODO</li>
+        <li>
+            <pre>>>> print(a)
+<span class="error">Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined</span></pre>
+            This means you are trying to use a variable before you have created it
+        </li>
+        <li>
+            <pre>>>> 5 = a
+<span class="error">  File "<stdin>", line 1
+SyntaxError: can't assign to literal</span></pre>
+            Like it says, you can't assign to a literal. The left side of an assignment operator must always have a variable.
+        </li>
+        <li>
+            <pre>>>>     print("hello")
+<span class="error">  File "<stdin>", line 1
+    print("hello")
+    ^
+IndentationError: unexpected indent</span></pre>
+            Because tabs matter in Python, the interpreter will fail if items are unnecessarily tabbed.
+        </li>
+        <li>
+            <pre>>>> if 5 == 5:
+... print(5)
+<span class="error">  File "<stdin>", line 2
+    print(5)
+        ^
+IndentationError: expected an indented block</span></pre>
+            The same happens if a new block of code is expected but the tab is not there.
+        </li>
+        <li>
+            <pre>>>> if = 9
+<span class="error">  File "<stdin>", line 1
+    if = 9
+       ^
+SyntaxError: invalid syntax</span></pre>
+            The same happens if a new block of code is expected but the tab is not there.
+        </li>
+        <li>
+            <pre>>>> if = 9
+<span class="error">  File "<stdin>", line 1
+    if = 9
+       ^
+SyntaxError: invalid syntax</span></pre>
+            Python has some reserved words/keywords like def, if, and True. You cannot use those few names as variables. You'll likely get the generic "syntax error" because the interpreter thinks you are trying to use the reserved word/keyword.
+        </li>
+        <li>
+            <pre>>>> def func()
+<span class="error">  File "<stdin>", line 1
+    def func()
+             ^
+SyntaxError: invalid syntax</span></pre>
+            Like above, this only gives the generic "invalid syntax" error. These are often the hardest to solve. It just means something is wrong about how you used Python. 
+        </li>
     </ul>
+    <p>Unfortunately, not all errors show themselves so blatantly. One common source of error is function redeclaration. Because everything in Python is a variable, including functions, you can change the builtin functions, etc. like this:</p>
+    <pre>>>> def len(col):
+...     return 7
+...
+>>> len([3,4])
+7</pre>
+    <p>The builtin len function which originally returns the length of a collection now always returns 7. This will cause problems when you later try to find the length of a list.</p>
+
+    <h2 id="scopes">Variable Scoping</h2>
+    <p>Scopes can provide another (often difficult to find) source of error. In Python, everything is contained by a <strong>scope</strong>. A scope is the area in which a variable is valid. For example, inside a function, you can create variables but they will be deleted at the end of the function as seen in this example:</p>
+    <pre>>>> def example():
+...     var_ex = 42
+...     return var_ex
+...
+>>> print(var_ex)
+<span class="error">Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'var_ex' is not defined</span></pre>
+    <p>As you can see, the variable <code>var_ex</code> is no longer defined once the function is over. The same applies inside any indented block of code (i.e. ifs, functions, etc.). However, scopes work differently the opposite way. A variable from outside of a function can be accessed from within a function as in the next example:</p>
+    <pre>>>> var_ex = 31
+>>> def example():
+...     inner_var_ex = var_ex
+...     return inner_var_ex
+...
+>>> print(example())
+31</pre>
+    <p>As you can see, the value of the variable <code>var_ex</code> was available inside the function. The larger issue comes when you try to change a variable from a higher scope (higher meaning that the code block it is in is less indented) as seen next:</p>
+    <pre>>>> var_ex = 31
+>>> def example():
+...     var_ex = 99
+...     return var_ex
+...
+>>> print(example())
+99
+>>> print(var_ex)
+31</pre>
+    <p>When <code>var_ex</code> is changed inside the function, a it actually makes a copy of the variable. After the funcion ends, the copy of var_ex is deleted so the original <code>var_ex</code> is used. Because these rules are so complicated, it is best to avoid reusing names and pass variables as parameters to functions rather than calling them from a different scope. The above function would be best written and called as such:</p>
+    <pre>>>> var_ex = 31
+>>> def example(var_ex):
+...     inner_var_ex = var_ex
+...     inner_var_ex = 99
+...     return inner_var_ex
+...
+>>> var_ex = example(var_ex)
+>>> print(var_ex)
+99</pre>
+    <p>The above example is fairly redundant because the value of <code>var_ex</code> is not needed in the function, but it shows how you would be able to access it properly in funcitonal programming.</p>
+
+    <h2 id="examples">Learn by Practice</h2>
+    <p>From now on, we will just look at and practice examples using everything we've discussed so far. (I'll probably just make them up as I go so I have enough time to write an <a href="../Assignments/06-review.html">assignment</a> by classtime).</p>
 </body>
