@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<head>
+
+</head>
+
+<body>
+    <h1>Types in Python</h1>
+    <p>
+    While Python does not require you to specify the type of a variable, that does not mean that variables are typeless. Python has a very clear idea of types, it simply figures out your variables type at 
+    runtime. The first data types we will cover are: booleans, floats, ints, strings
+    </p>
+    
+    <h1>Numeric Types</h1>
+    <p>
+    Python's two main numeric types are integers and floating point numbers. An <em>integer</em> is the same as in mathematics, a number with no part past the decimal point. Examples of integers include 2 and
+    78. A <em>float</em> is any number with a decimal part. 4.5 and 1.396 are both floats and, to Python, so is 2.0. The main difference between these two is what operators support them. For all arithmetic
+    purposes, they are the same. For other uses, covered later, only integers are acceptable. Booleans are variables which represents true and false, represented by the literals True and False 
+    (case-sensitive), are also numeric types. Internally, True corresponds to 1 and False to 0, and can be used as such.  
+    </p>
+    
+    <h1>Strings</h1>
+    <p>
+    Strings are values which represent text, enclosed in either "" or ''. There are a subset of sequence data, which we will cover later. Unlike all the other types mentioned, strings are not numeric. They
+    are mainly used as messages in input/output statements.
+    </p>
+    
+    <h1>Type Conversion</h1>
+    <p>
+    There are many situations in which the type of one variable may be inappropriate for the task. In these scenarios, we may use a <em>type conversion</em> to change the type of our variable. Suppose we
+    wanted to covert a variable <code>a = 5</code> to a string. We can call the str() method on a to get the string form of the number, like so: <code> a = str(a) </code>. Note that the str() method does not
+    change the value of a, but instead returns the converted value. There are similar methods for other data types: float() and int(). These methods will not work on every piece of data, and converting
+    between two incompatible types is a <em>value error</em>. You must ensure that the types are correct before you decide to convert. 
+    </p>
+</body>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<head>
+
+</head>
+
+<body>
+<h1>Variables</h1>
+<p>
+While literals are useful, we can do better. Just like we do in math, we can abstract literal values into <em>variables</em>. Like in most languages, Python variables are <em>mutable</em>, or changeable. 
+Unlike Java, which you are probably familar with, Python is <em>dynamically typed</em>. In a language like Java or C++, each variable has a type, such as <code>int</code>. In Python, you don't have to do
+that. Let's look at a variable declaration: <br>
+<code>
+a = 10
+</code>
+<br>
+This code creates a variable with a value of 10. This is a numeric type, usable as an int. Note that we didn't need to say the type: Python just knew what it was. Note that our variable doesn't have an 
+explict type, which allows me to do this: <br>
+<code>
+a = 10
+a = "Hello"
+print(a)
+</code>
+<br>
+And this will output "Hello". Yes, we can change the type of the variable at assignment. Note that the variable is not typeless. Each variable has a definite type, and this type will determine how the 
+variable behaves. All Python does is determine the variable type at runtime. 
+<h2>Variable Naming</h2>
+<p>
+Python, like any other language, has limitations on what you may name a variable. The first couple are pretty standard. You may not include whitespace in a variables name and you may not start a variable with
+a number. Special characters are usually discouraged, as the variable names should be descriptive. The preferred naming method for variable is lowercase_with_underscores. Don't begin the names of regular 
+variables with _ or __. These have special meanings.
+</p> 
+</body>
