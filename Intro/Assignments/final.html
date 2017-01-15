@@ -1,0 +1,38 @@
+<h1>Final Project</h1>
+<p>The goal of this final project is to combine the ideas of everything we've learned so far into one assignment. It will be "due" at the end of class on Tuesday, but feel free to work on it over the break if you don't finish. All I care about is that you learn from it. You will create a tool which helps with commonly done scientific actions, like conversions and calculations. The program will loop until the user specifies that they would like to quit. You will provide implementations for the following:</p>
+<ul>
+    <li><kbd>convert [number] [unit] to [unit]</kbd> will display the converted number with units if possible. (i.e. <kbd> convert 1 ft to in</kbd> would output <samp>12 in</samp>) You will provide a small set of conversion factors as literals in the code (this would be ideal as a file, but we didn't get a chance to cover file input and output). You can expand this list however much you want, but this project is more based on proof of concept than providing an extensive list of conversion factors</li>
+    <ul>
+        <li>You should provide conversion factors of multiple types (i.e. mass, length, and temperature (Fahrenheit to Celsius might be kind of weird, so I'll leave it as a challenge))</li>
+        <li>There are several ways to do this, but the most straightforward is probably a dictionary. (Another is a lot of conditionals.)</li>
+        <li>You should handle several error cases (nothing which requires exception handling - i.e. errors casting invalid inputs):</li>
+        <ul>
+            <li>Unit conversion between types (i.e. <kbd>convert 5 in to kg</kbd>)</li>
+            <li>Unsupported unit name (<kbd>convert 6 squirrels to kg</kbd>)</li>
+        </ul>
+        <li>You can use either abbreviated names like "in" or full names like "inches". (You probably don't want to worry about singular vs plural in the case of "1 inches" or "3 inch".)</li>
+    </ul>
+    <li><kbd>calc [num] [operator] [num]</kbd> will display the calculated value. (i.e. <kbd>5 + 8</kbd> will display <samp>13</samp>.) This basic calculator will only accept one operator at a time (i.e. <kbd>5 + 6 * 9</kbd> is invalid). </li>
+    <ul>
+        <li>You are only required to implement the four basic operators +, -, *, and / but feel free to implement more. You can implement word operators too if you'd like (i.e. <kbd>3 hypot 4</kbd> would display <samp>5</samp>.) but this is not required.</li>
+        <li>You should display several error cases (like before, nothing that required exception handling)</li>
+    </ul>
+</ul>
+
+<h2>Other requirements</h2>
+<p>Working code is not the only important aspect of this project. Documentation is just as important because otherwise anyone who needs to use or change your code will have no clue what you did. For this reason, the following are also required:</p>
+<ul>
+    <li>Comments. For every function, I want a formal docstring, and there should be a hashtag comment explaining what you're doing and the reasoning behind it at least every 8 or so lines. If there's any doubt someone could get confused, comment it. Lastly, there should be a commment at the very top explaining the goal of the script.</li>
+    <li>Readme. We haven't discussed this in class, but a readme is a text file which explains what your program is and how to use it. It only needs to be as long as necessary for someone reading it to know how to use your code. There is no exact way to do this, but here's an outline of some things you'll probably want to cover:</li>
+    <ul>
+        <li>What is the goal of you project (if you aren't sure, this outline is a great place to start).</li>
+        <li>How the user is expected to interact with the program.</li>
+        <li>The capabilities and limitations of the program (for example, the units and operators available for the user to use in this project).</li>
+        <li>How to install and run your code Since Python is super easy and doesn't require compilation, this isn't really necessary, but you can include something like "run <kbd>python MyProject.py</kbd>". If you don't want to include this, that's fine.</li>
+        <li>Cite any sources you used in determining how to do this or any non-standard modules you used. For this project you probably won't use any modules outside of the standard Python library, but if you need to Google how to do anything, you should probably cite Stack Overflow or whatever site you used. (This isn't absolutely necessary for this project, but if you write any code for publication or distribution it is.)</li>
+        <li>The author(s) - in this case, just you.</li>
+        <li>Examples are often included, but that takes a lot of effort, so I won't ask for it. Plus you could just redirect them here for examples.</li>
+</ul>
+
+<h2>Hints and Answers</h2>
+<p>I haven't implemented any of them yet, but any hints or answers will be available here. I plan to implement the project in Python for reference after you finish. I will try to make it so you can run the code without seeing it so you can fully understand what the code is supposed to do.</p>

@@ -1,0 +1,144 @@
+<h1>Looping</h1>
+<p>This is the final day of actual class. The next two days will be spent working on the final project and answering project-specific questions. But today, we will discuss looping, an integral part of computer science (and also the final project).</p>
+
+<h2 id="objectives">Today's Objectives</h2>
+<ul>
+    <li><a href="#loops">Loops</a></li>
+    <ul>
+        <li><a href="#why-loops">Why loops</a></li>
+        <li><a href="#while"><code>while</code> loops</a></li>
+        <li><a href="#for"><code>for</code> loops</a></li>
+        <li><a href="#break-continue"><code>break</code>, <code>continue</code>, and <code>pass</code> Statements</a></li>
+    </ul>
+    <li><a href="#final">Final project</a></li>
+    <li>Possibly other miscellaneous items</li>
+    <ul>
+        <li>Escape sequences</li>
+        <li>Exception handling</li>
+        <li>File Input and Output</li>
+    </ul>
+</ul>
+
+<h2 id="loops">Loops</h2>
+
+<h3 id="why-loops">Why Loops</h3>
+<p>Loops allow you do do the same piece of code multiple times. In some cases, you can just copy and paste the same piece of code multiple times, but what if you change your mind about something in the code and have to change it many times? Or what if you want to do the same thing 500 times? Loops make this much easier. In addition, sometimes you don't know how many times a piece of code needs to be executed. For example, if you wanted to print each item in a list, you would have to know how long the list is (you usually don't). Loops make dealing with lists of variable lengths much easier too.</p>
+
+<h3 id="while"><code>while</code> Loops</h2>
+<p><code>while</code> loops execute a piece of code <em>while</em> a boolean condition is True. For example, we'll look at the following script:</p>
+<pre>x = 9
+while x > 2:
+    print(x)
+    x = x - 2
+</pre>
+<p>This script prints x and subtracts 2 from x while x is greater than 2. It would output the following:</p>
+<pre>9
+7
+5
+3</pre>
+<p>Next, we will trace exactly what happens in this code:</p>
+<ol>
+    <li>First, x is set to 9</li>
+    <li>Then we enter the loop<li>
+    <ol>
+        <li>On first test, 9 > 2 is True, so it prints 9 and subtracts 2 from x. x now contains 7</li>
+        <li>On second test, 7 > 2 is True, so it prints 7 and subtracts 2 from x. x now contains 5</li>
+        <li>On third test, 5 > 2 i True, so it prints 5 and subtracts 2 from x. x now contains 3</li>
+        <li>On fourth test, 3 > 2 is True, so it prints 3 and subtracts 2 from x. x now contains 1</li>
+        <li>On fifth, test, 1 > 2 is False, so it exits the loop</li>
+    </ol>
+    <li>That is the end of the script. (Note that x contains 1, not 3 - this confuses many people)</li>
+</ol>
+
+<h3 id="for"><code>for</code> Loops</h2>
+<p>Like <code>while</code> loops, <code>for</code> loops execute a piece of code multiple times. Instead of repeatedly testing a condition, for loops run <em>for</em> each element in a collection or iterator. We have not discussed iterators, but an iterator works essentially the same as a collection in a for loop except its values are calculated as needed rather than stored. The following shows an example for loop:</p>
+<pre>name_list = ["John", "Jim", "Bill", "Sarah"]
+for single_name in name_list:
+    print("Good morning, " + single_name)</pre>
+<p>This script would output the following:</p>
+<pre>Good morning, John
+Good morning, Jim
+Good morning, Bill
+Good morning, Sarah</pre>
+<p>As you can see, the code is executed for every item in the list. the variable <code>single_name</code> is assigned to each item in the list on each consecutive iteration of the loop. We'll trace the program to see what exactly happens:</p>
+<ol>
+    <li>First, the variable <code>name_list</code> is made into a list with 4 strings</li>
+    <li>Then we enter the loop</li>
+    <ol>
+        <li>On the first iteration, <code>single_name</code> is assigned "John". It prints "Good morning, John".</li>
+        <li>On the second iteration, <code>single_name</code> is assigned "Jim". It prints "Good morning, Jim".</li>
+        <li>On the third iteration, <code>single_name</code> is assigned "Bill". It prints "Good morning, Bill".</li>
+        <li>On the forth iteration, <code>single_name</code> is assigned "Sarah". It prints "Good morning, Sarah".</li>
+        <li>That is the end of the list, so it exits the loop</li>
+    </ol>
+</ol>
+
+<h4>Issues of for loops</h4>
+<p>For loops are extremely convenient in many cases, but they have limitations. For example, simple for loops often fail if:</p>
+<ul>
+    <li>The size of the loops changes</li>
+    <li>You want to change the values in the collection</li>
+</ul>
+<p>The first issue is often solved by using a while loop. It is usually more applicable in cases where the size needs to change anyway. The second issue brings us to the next point - the <code>range()</code> function</p>
+
+<h4><code>range()</code> Function</h4>
+<p>The <code>range()</code> is used for iterating over integer sequences. You can use it to produce sequences like {1, 2, 3, 4, 5} or {8, 6, 4, 2}. Note that in Python 3, range() produces a range object rather than a list, but you can cast it to a list with the <code>list()</code> builtin function. Here's an example of how it can be used:</p>
+<pre>for x in range(1, 5):
+    print(x)</pre>
+<p>This would print the following:</p>
+<pre>1
+2
+3
+4</pre>
+<p>The first parameter of range is the start number and the second is the end number. Note that it goes to the end number but does not include it. You can also provide a third parameter which specifies the increment, how much it increases by each time (default is 1). If that value is negative, it will go backwards. Both of these cases can be seen in the following:</p>
+<pre>for x in range(0, 10, 3):
+    print(x)</pre>
+<p>This would print 0, 3, 6, and 9 (on newlines of course)</p>
+<pre>for x in range(10, 7 -1):
+    print(x)</pre>
+<p>This would print 10, 9, and 8 (on newlines) because it goes up by -1 or down by 1</p>
+
+<h4>How <code>range()</code> is used for Mutating Lists</h4>
+<p>Because a simple for loop creates a copy of each item in the list, mutating is slightly different. Instead you would create a loop of indexes up to but not including the list length and change the list directly as seen in the following example:</p>
+<pre>list_ex = [4,5,5,9]
+for index in range(0, len(list_ex)):
+    list_ex[i] = 1</pre>
+<p>This loop replaces each item in the list with 1 by using an index. The variable <code>list_ex</code> would contain [1,1,1,1] after the loop.</p>
+
+<h3 id="break-continue"><code>break</code>, <code>continue</code>, and <code>pass</code> Statements</h3>
+<p>Loops include several other keywords which make loops simpler to deal with. They are not necessary but they make your life easier.</p>
+<ul>
+    <li><code>break</code></li>
+    <ul>
+        <li>The break keyword can be placed inside a loop so that when it is reached, the loop is automatically exited. It is often put inside a conditional so that it is only sometimes reached.</li>
+    </ul>
+    <li><code>continue</code></li>
+    <ul>
+        <li>Like the break keyword, continue exits the loop when it is reached. However, unlike break, it goes to the next iteration of the loop rather than exiting completely. In a while loop, the loop starts again by testing the conditional. In a for loop, it goes to the next item in the list and does the loop body again.</li>
+    </ul>
+    <li><code>pass</code></li>
+    <ul>
+        <li>Like in functions, pass just means that you intentionally have an empty loop. It can also be placed at the end of the loop body without harm but it does nothing. Like functions, you will rarely use the pass keyword.</li>
+    </ul>
+</ul>
+
+<h4>Other useful looping functions</h4>
+<ul>
+    <li><code>reversed()</code> accepts a collection or iterable (meaning it can be used in a for loop) and returns the reverse of it. For example reversed([1,2,3]) would be 3, 2, 1. (Note that it is not a list by default but can be casted to one if necessary).</li>
+    <li><code>sorted()</code> accepts a collection and returns it sorted by value (only works if the values are number-like)</li>
+    <li><code>zip()</code> accepts any number of collections of the same length and allows you to iterate over all of them at once as in the following example:</li>
+    <ul>
+        <li><pre>x_list = [2,3,4]
+y_list = [3,9,1]
+z_list = [1,8,4]
+for x, y, z in zip(x_list, y_list, z_list):
+    print(x + y + z)</pre></li>
+        <li>This would print 6, 20, and 9 (on newlines) because these are the sums of the first, second, and third items in each list</li>
+    </ul>
+</ul>
+
+<h2 id="practice">Practice Assignment</h2>
+<p>Because time is short and I want you to have time to start working on your final project, we will have an in class assignment today. It can be found <a href="../Assignments/07-loops.html">here</a>.</p>
+
+<h2 id="final">Final Project</h2>
+<p>The final project will be due at the end of class on the last day of class. It is designed to cover multiple areas of this class. More details can be found in the <a href="../Assignments/final.html">final project description</a>. Tonight's homework is to read the final project description and start brainstorming ideas. After that, you can start implementing. If you have questions, you can ask in class the next two days or send an email.</p>
