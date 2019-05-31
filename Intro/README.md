@@ -5,4 +5,4 @@ This repository is a beginner's tutorial to Python. It will be taught during the
 
 ## Licensing?
 
-Nope. This is stuff is completely free. Feel free to use it however you like, just make sure to give us credit. (I don't really care about the credit. I just don't support plagiarism.) Please spread the good news of Python. Go and tell it on the mountains, over the hills, and everywhere. 
+Nope. This is stuff is completely free. Feel free to use it however you like. Please spread the good news of Python. Go and tell it on the mountains, over the hills, and everywhere. 
